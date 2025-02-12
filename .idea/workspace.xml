@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/NACA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
+    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Écriture de la majorité du code.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profil_NACA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Zach-Yee-Haw"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Zach-Yee-Haw/NACA.git",
+    "accountId": "b7a996e6-ed84-4828-b9a9-657799068c26"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -59,6 +67,27 @@
       <option name="presentableId" value="Default" />
       <updated>1739377239359</updated>
     </task>
+    <task id="LOCAL-00001" summary="Écriture de la majorité du code.">
+      <option name="closed" value="true" />
+      <created>1739381562629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739381562629</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Écriture de la majorité du code.">
+      <option name="closed" value="true" />
+      <created>1739381616310</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739381616310</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Écriture de la majorité du code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Écriture de la majorité du code." />
   </component>
 </project>

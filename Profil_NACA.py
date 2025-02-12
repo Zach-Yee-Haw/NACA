@@ -56,27 +56,30 @@ while True:
     else:
         print('Entrée invalide, essayez à nouveau.')
 
-m = (profil // 1000) / 100
+# On trouve nos paramètres de profil selon le choix de l'utilisateur
+m = (profil // 1000) / 100  # Cambrure maximale
 profil -= m * 100000
-p = (profil // 100) / 10
+p = (profil // 100) / 10    # Position de la cambrure maximale
 profil -= p * 1000
-t = profil/100
+t = profil/100              # Épaisseur max du profil
 
-
+# On initialise notre premier array en mode standard
 xdown = np.linspace(0, 1, num = nombre_de_points)
 
+# On applique la transformée de Glauert si désiré par l'utilisateur
 if distribution == 'g':
     glauert = np.linspace(0, np.pi, num = nombre_de_points)
 
     for i in range(nombre_de_points):
         xdown[i-1] = 0.5*(1-np.cos(glauert[i-1]))
 
-xup = xdown
-
+# On initialise nos autres NDArrays
+xup = xdown.copy()
 cambrure = np.zeros(nombre_de_points)
-yup = cambrure
-ydown = cambrure
+yup = cambrure.copy()
+ydown = cambrure.copy()
 
+# On définit notre cambrure
 for i in range(nombre_de_points):
 
     if xdown[i-1] <= p:
@@ -84,6 +87,7 @@ for i in range(nombre_de_points):
     else:
         cambrure[i - 1] = (m / (1 - p) ** 2) * ((1 - 2 * p) + 2 * p * xdown[i - 1] - xdown[i - 1] ** 2)
 
+# On calcul notre profil en incluant la cambrure
 for i in range(nombre_de_points):
 
     yup[i - 1] = 5 * t * (0.2969 * xup[i - 1] ** 0.5 - 0.1260 * xup[i - 1] - 0.3516 * xup[i - 1] ** 2 +
@@ -92,18 +96,24 @@ for i in range(nombre_de_points):
     ydown[i - 1] = - 5 * t * (0.2969 * xdown[i - 1] ** 0.5 - 0.1260 * xdown[i - 1] - 0.3516 * xdown[i - 1] ** 2 +
                     0.2843 * xdown[i - 1] ** 3 - 0.1036 * xdown[i - 1] ** 4) + cambrure[i - 1]
 
-# quelques paramètres pour le graphique
-plt.rcParams['font.size'] = 14
-plt.rcParams['figure.dpi'] = 100
+# On applique la longueur de corde
+xup *= corde
+xdown *= corde
+yup *= corde
+ydown *= corde
 
-# Bloc de code pour le tracé
+# On définit quelques paramètres pour le graphique
+plt.rcParams['font.size'] = 14
+plt.rcParams['figure.dpi'] = 200
+
+# On trace le profil
 plt.plot(xup,yup,label='Extrados', color=(0, 0, 1))
-plt.plot(xup,ydown,label='Intrados', color=(1, 0, 0))
+plt.plot(xdown,ydown,label='Intrados', color=(1, 0, 0))
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.grid()
 plt.title('Profil NACA' + str(int(m*100)) + str(int(p*10)) + str(int(t*100)))
 plt.xlim(-corde*0.1, corde*1.1)
-plt.ylim(-corde*0.5, corde*0.5)
+plt.ylim(-corde*0.6, corde*0.6)
 plt.show()
