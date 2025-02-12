@@ -100,6 +100,18 @@ for i in range(nombre_de_points):
 up *= corde
 down *= corde
 
+# On trouve l'épaisseur max et la position de l'épaisseur max
+epaisseur_max = 0
+position_epaisseur_max = 0
+for i in range(nombre_de_points):
+    if up[i-1, 1] - down[i-1, 1] > epaisseur_max:
+        epaisseur_max = up[i-1, 1] - down[i-1, 1]
+        position_epaisseur_max = up[i-1, 0]
+print('Épaisseur maximale = ' + str(epaisseur_max) + ' m')
+print('Position de l\'épaisseur maximale = ' + str(position_epaisseur_max) + ' m')
+print('Épaisseur maximale adimentionnée (t/c) = ' + str(epaisseur_max/corde))
+print('Position de l\'épaisseur maximale adimentionnée (x/c) = ' + str(position_epaisseur_max/corde))
+
 # On définit quelques paramètres pour le graphique
 plt.rcParams['font.size'] = 14
 plt.rcParams['figure.dpi'] = 200
@@ -115,3 +127,5 @@ plt.title('Profil NACA' + str(int(m*100)) + str(int(p*10)) + str(int(t*100)))
 plt.xlim(-corde*0.1, corde*1.1)
 plt.ylim(-corde*0.6, corde*0.6)
 plt.show()
+
+input('Appuyez sur la touche ENTRÉE pour terminer.\n')
