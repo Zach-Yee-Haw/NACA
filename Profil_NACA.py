@@ -63,52 +63,50 @@ p = (profil // 100) / 10    # Position de la cambrure maximale
 profil -= p * 1000
 t = profil/100              # Épaisseur max du profil
 
-# On initialise notre premier array en mode standard
-xdown = np.linspace(0, 1, num = nombre_de_points)
+# On initialise notre x en mode standard
+x = np.linspace(0, 1, num = nombre_de_points)
 
 # On applique la transformée de Glauert si désiré par l'utilisateur
 if distribution == 'g':
     glauert = np.linspace(0, np.pi, num = nombre_de_points)
 
     for i in range(nombre_de_points):
-        xdown[i-1] = 0.5*(1-np.cos(glauert[i-1]))
+        x[i-1] = 0.5*(1-np.cos(glauert[i-1]))
 
-# On initialise nos autres NDArrays
-xup = xdown.copy()
+# On initialise nos NDArrays principaux
+up = np.zeros((nombre_de_points, 2))
 cambrure = np.zeros(nombre_de_points)
-yup = cambrure.copy()
-ydown = cambrure.copy()
+up[:, 0] = x.copy()
+down = up.copy()
 
-# On définit notre cambrure
+# On calcul notre cambrure
 for i in range(nombre_de_points):
 
-    if xdown[i-1] <= p:
-        cambrure[i - 1] = (m / p ** 2) * (2 * p * xdown[i - 1] - xdown[i - 1] ** 2)
+    if down[i-1, 0] <= p:
+        cambrure[i - 1] = (m / p ** 2) * (2 * p * down[i-1, 0] - down[i-1, 0] ** 2)
     else:
-        cambrure[i - 1] = (m / (1 - p) ** 2) * ((1 - 2 * p) + 2 * p * xdown[i - 1] - xdown[i - 1] ** 2)
+        cambrure[i - 1] = (m / (1 - p) ** 2) * ((1 - 2 * p) + 2 * p * down[i-1, 0] - down[i-1, 0] ** 2)
 
 # On calcul notre profil en incluant la cambrure
 for i in range(nombre_de_points):
 
-    yup[i - 1] = 5 * t * (0.2969 * xup[i - 1] ** 0.5 - 0.1260 * xup[i - 1] - 0.3516 * xup[i - 1] ** 2 +
-                0.2843 * xup[i - 1] ** 3 - 0.1036 * xup[i - 1] ** 4) + cambrure[i - 1]
+    up[i-1, 1] = 5 * t * (0.2969 * up[i-1, 0] ** 0.5 - 0.1260 * up[i-1, 0] - 0.3516 * up[i-1, 0] ** 2 +
+                0.2843 * up[i-1, 0] ** 3 - 0.1036 * up[i-1, 0] ** 4) + cambrure[i - 1]
 
-    ydown[i - 1] = - 5 * t * (0.2969 * xdown[i - 1] ** 0.5 - 0.1260 * xdown[i - 1] - 0.3516 * xdown[i - 1] ** 2 +
-                    0.2843 * xdown[i - 1] ** 3 - 0.1036 * xdown[i - 1] ** 4) + cambrure[i - 1]
+    down[i-1, 1] = - 5 * t * (0.2969 * down[i-1, 0] ** 0.5 - 0.1260 * down[i-1, 0] - 0.3516 * down[i-1, 0] ** 2 +
+                    0.2843 * down[i-1, 0] ** 3 - 0.1036 * down[i-1, 0] ** 4) + cambrure[i - 1]
 
 # On applique la longueur de corde
-xup *= corde
-xdown *= corde
-yup *= corde
-ydown *= corde
+up *= corde
+down *= corde
 
 # On définit quelques paramètres pour le graphique
 plt.rcParams['font.size'] = 14
 plt.rcParams['figure.dpi'] = 200
 
 # On trace le profil
-plt.plot(xup,yup,label='Extrados', color=(0, 0, 1))
-plt.plot(xdown,ydown,label='Intrados', color=(1, 0, 0))
+plt.plot(up[:, 0],up[:, 1],label='Extrados', color=(0, 0, 1))
+plt.plot(down[:, 0],down[:, 1],label='Intrados', color=(1, 0, 0))
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()

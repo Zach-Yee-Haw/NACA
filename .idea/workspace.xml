@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Écriture de la majorité du code.">
+    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Ajouts de commentaires et on prends en compte la corde choisit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profil_NACA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
     </list>
@@ -83,11 +83,20 @@
       <option name="project" value="LOCAL" />
       <updated>1739381616310</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajouts de commentaires et on prends en compte la corde choisit.">
+      <option name="closed" value="true" />
+      <created>1739382721740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739382721740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Écriture de la majorité du code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Écriture de la majorité du code." />
+    <MESSAGE value="Ajouts de commentaires et on prends en compte la corde choisit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouts de commentaires et on prends en compte la corde choisit." />
   </component>
 </project>
