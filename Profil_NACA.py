@@ -10,10 +10,10 @@ entre une mauvaise valeur, on boucle jusqu'à ce qu'il en entre une bonne.
 
 while True:
 
-    profil = input('Entrez un profil NACAXXXX : ')
+    profil = input('Entrez un profil NACAXXXX : ').lower()
 
-    if len(profil) == 8:
-        profil = profil[3:7]
+    if len(profil) == 8 and profil[0:4] == 'naca':
+        profil = profil[4:8]
 
     if len(profil) == 4:
         try:
@@ -127,5 +127,3 @@ plt.title('Profil NACA' + str(int(m*100)) + str(int(p*10)) + str(int(t*100)))
 plt.xlim(-corde*0.1, corde*1.1)
 plt.ylim(-corde*0.6, corde*0.6)
 plt.show()
-
-input('Appuyez sur la touche ENTRÉE pour terminer.\n')

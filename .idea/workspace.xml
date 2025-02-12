@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Utilisation de NDArrays à 2 dimensions.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur.">
       <change beforePath="$PROJECT_DIR$/Profil_NACA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Profil_NACA.executor": "Run",
+    "Python.Profil_NACA.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
   }
@@ -99,13 +98,22 @@
       <option name="project" value="LOCAL" />
       <updated>1739383551847</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur.">
+      <option name="closed" value="true" />
+      <created>1739384404818</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739384404818</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Écriture de la majorité du code." />
     <MESSAGE value="Ajouts de commentaires et on prends en compte la corde choisit." />
     <MESSAGE value="Utilisation de NDArrays à 2 dimensions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Utilisation de NDArrays à 2 dimensions." />
+    <MESSAGE value="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur." />
   </component>
 </project>
