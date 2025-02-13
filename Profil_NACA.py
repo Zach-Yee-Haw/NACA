@@ -69,21 +69,20 @@ p = (profil // 100) / 10    # Position de la cambrure maximale
 profil %= 100
 t = profil/100              # Épaisseur max du profil
 
-# On initialise notre x en mode standard
-x = np.linspace(0, 1, num = nombre_de_points)
+# On initialise notre premier NDArray en mode standard
+down = np.zeros((nombre_de_points, 2))
+down[:, 0] = np.linspace(0, 1, num = nombre_de_points)
 
 # On applique la transformée de Glauert si désiré par l'utilisateur
 if distribution == 'g':
     glauert = np.linspace(0, np.pi, num = nombre_de_points)
 
     for i in range(nombre_de_points):
-        x[i-1] = 0.5*(1-np.cos(glauert[i-1]))
+        down[i-1, 0] = 0.5*(1-np.cos(glauert[i-1]))
 
-# On initialise nos NDArrays principaux
-up = np.zeros((nombre_de_points, 2))
+# On initialise nos autres NDArrays
 cambrure = np.zeros(nombre_de_points)
-up[:, 0] = x.copy()
-down = up.copy()
+up = down.copy()
 
 # On calcul notre cambrure
 for i in range(nombre_de_points):
