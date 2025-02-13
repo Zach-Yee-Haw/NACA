@@ -31,6 +31,9 @@ while True:
 
     try:
         corde = int(corde)
+        if corde <= 0:
+            print('Entrée invalide, essayez à nouveau.')
+            continue
     except:
         print('Entrée invalide, essayez à nouveau.')
         continue
@@ -42,6 +45,9 @@ while True:
 
     try:
         nombre_de_points = int(nombre_de_points)
+        if nombre_de_points <= 0:
+            print('Entrée invalide, essayez à nouveau.')
+            continue
     except:
         print('Entrée invalide, essayez à nouveau.')
         continue

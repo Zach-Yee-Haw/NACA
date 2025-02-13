@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur.">
-      <change beforePath="$PROJECT_DIR$/Profil_NACA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
+    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Entrée un peu plus stricte du profil NACA.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,34 +22,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Zach-Yee-Haw"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Zach-Yee-Haw&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Zach-Yee-Haw/NACA.git",
-    "accountId": "b7a996e6-ed84-4828-b9a9-657799068c26"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Zach-Yee-Haw/NACA.git&quot;,
+    &quot;accountId&quot;: &quot;b7a996e6-ed84-4828-b9a9-657799068c26&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2swqySuGBJRhsEafKfX5jvjdX88" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Profil_NACA.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Profil_NACA.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -106,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739384404818</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Entrée un peu plus stricte du profil NACA.">
+      <option name="closed" value="true" />
+      <created>1739384759250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739384759250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,6 +122,7 @@
     <MESSAGE value="Ajouts de commentaires et on prends en compte la corde choisit." />
     <MESSAGE value="Utilisation de NDArrays à 2 dimensions." />
     <MESSAGE value="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur." />
+    <MESSAGE value="Entrée un peu plus stricte du profil NACA." />
+    <option name="LAST_COMMIT_MESSAGE" value="Entrée un peu plus stricte du profil NACA." />
   </component>
 </project>
