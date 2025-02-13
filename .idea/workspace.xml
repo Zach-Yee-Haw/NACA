@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Entrée un peu plus stricte du profil NACA.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8615d954-056e-41a9-89b5-f898668e356b" name="Changes" comment="Éliminations des entrées négatives.">
+      <change beforePath="$PROJECT_DIR$/Profil_NACA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Profil_NACA.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Profil_NACA.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/zacha/Desktop/ets/master/MGA802_cool/NACA"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -114,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739384759250</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Éliminations des entrées négatives.">
+      <option name="closed" value="true" />
+      <created>1739479828729</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739479828729</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,6 +133,7 @@
     <MESSAGE value="Utilisation de NDArrays à 2 dimensions." />
     <MESSAGE value="Ajout du calcul de la position de l'épaisseur maximale et de sa valeur." />
     <MESSAGE value="Entrée un peu plus stricte du profil NACA." />
-    <option name="LAST_COMMIT_MESSAGE" value="Entrée un peu plus stricte du profil NACA." />
+    <MESSAGE value="Éliminations des entrées négatives." />
+    <option name="LAST_COMMIT_MESSAGE" value="Éliminations des entrées négatives." />
   </component>
 </project>

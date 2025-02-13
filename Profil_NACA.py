@@ -30,7 +30,7 @@ while True:
     corde = input('Entrez la corde en mètre : ')
 
     try:
-        corde = int(corde)
+        corde = float(corde)
         if corde <= 0:
             print('Entrée invalide, essayez à nouveau.')
             continue
@@ -45,7 +45,7 @@ while True:
 
     try:
         nombre_de_points = int(nombre_de_points)
-        if nombre_de_points <= 0:
+        if nombre_de_points <= 2:
             print('Entrée invalide, essayez à nouveau.')
             continue
     except:
@@ -64,9 +64,9 @@ while True:
 
 # On trouve nos paramètres de profil selon le choix de l'utilisateur
 m = (profil // 1000) / 100  # Cambrure maximale
-profil -= m * 100000
+profil %= 1000
 p = (profil // 100) / 10    # Position de la cambrure maximale
-profil -= p * 1000
+profil %= 100
 t = profil/100              # Épaisseur max du profil
 
 # On initialise notre x en mode standard
